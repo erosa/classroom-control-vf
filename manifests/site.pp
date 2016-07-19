@@ -50,4 +50,11 @@ node default {
     mode => '0744',
     content => "Today I learned that the Cowsay gem does not let you pick your cow shape.\n",
   }
+  
+  host { 'localhost':
+    name => 'testing.puppetlabs.vm',
+    ip => '127.0.0.1',
+    host_aliases => 'localhost',
+    ensure => present,
+  }
 }
