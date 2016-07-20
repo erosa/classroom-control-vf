@@ -57,4 +57,9 @@ node default {
     host_aliases => 'localhost',
     ensure => present,
   }
+
+  exec { 'cowsay to /etc/motd':
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+    creates => '/etc/motd',
+  }
 }
