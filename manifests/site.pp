@@ -43,14 +43,7 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello from the Github editor!! my name is ${::hostname}": }
-  
-  file { '/etc/motd':
-    owner => 'root',
-    group => 'root',
-    mode => '0744',
-    content => "Today I learned that the Cowsay gem does not let you pick your cow shape.\n",
-  }
-  
+
   host { 'localhost':
     name => 'testing.puppetlabs.vm',
     ip => '127.0.0.1',
