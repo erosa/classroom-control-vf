@@ -37,26 +37,3 @@ ini_setting { 'random ordering':
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-
-node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
-  notify { "Hello from the Github editor!! my name is ${::hostname}": }
-
-  host { 'localhost':
-    name => 'testing.puppetlabs.vm',
-    ip => '127.0.0.1',
-    host_aliases => 'localhost',
-    ensure => present,
-  }
-
-  exec { 'cowsay to /etc/motd':
-    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-    creates => '/etc/motd',
-    path    => '/usr/local/bin',
-  }
-
-  include users
-  include skeleton
-}
