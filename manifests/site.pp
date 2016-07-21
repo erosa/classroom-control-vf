@@ -41,6 +41,6 @@ ini_setting { 'random ordering':
 node default {
   unless $facts['virtual'] == 'physical' {
     $cap_name = capitalize($facts['virtual'])
-    notify{"This is a ${cap_name} virtual machine."}
+    notify{"This is a ${cap_name} virtual machine.": }
   }
 }
