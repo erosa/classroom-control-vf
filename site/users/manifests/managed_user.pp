@@ -5,14 +5,14 @@ define users::managed_user (
     ensure => present,
   }
 
-  file { '/home/${username}':
+  file { "/home/${username}":
     ensure => directory,
     owner  => $username,
     group  => $username,
     mode   => '0755',
   }
 
-  file { '/home/${username}/.ssh/':
+  file { "/home/${username}/.ssh/":
     ensure => directory,
     owner  => $username,
     group  => $username,
