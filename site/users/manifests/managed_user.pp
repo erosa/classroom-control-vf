@@ -1,5 +1,5 @@
 define users::managed_user (
-  $username,
+  $username = $title,
 ) {
   user { $username:
     ensure => present,
