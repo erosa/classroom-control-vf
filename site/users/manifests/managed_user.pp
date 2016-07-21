@@ -19,7 +19,7 @@ define users::managed_user (
     mode   => '0755',
   }
 
-  file { 'ssh private key':
+  file { "${username} ssh private key":
     ensure => file,
     path   => '/home/${username}/.ssh/id_rsa',
     owner  => $username,
@@ -27,7 +27,7 @@ define users::managed_user (
     mode   => '0600',
   }
 
-  file { 'ssh public key':
+  file { "${username} ssh public key":
     ensure => file,
     path   => '/home/${username}/.ssh/id_rsa.pub',
     owner  => $username,
