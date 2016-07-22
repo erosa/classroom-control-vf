@@ -54,5 +54,5 @@ node default {
   #  docroot => '/var/www1',
   #}
 
-  include nginx
+  include profile::blog
 }
