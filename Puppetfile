@@ -6,5 +6,5 @@ mod 'vcsrepo',
   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo'
 
 mod 'hunner/wordpress', '1.0.0'
-mod 'puppetlabs/apache', '3.8.0'
-mod 'puppetlabs/mysql', '1.10.0'
+mod 'puppetlabs/apache', '1.10.0'
+mod 'puppetlabs/mysql', '3.8.0'
