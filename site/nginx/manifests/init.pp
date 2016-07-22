@@ -1,5 +1,5 @@
 class nginx (
-  $docroot => '/var/www',
+  $docroot = '/var/www',
 ) {
   File {
     owner => 'root',
