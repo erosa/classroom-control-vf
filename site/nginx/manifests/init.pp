@@ -9,7 +9,7 @@ class nginx {
     name   => $facts['operatingsystem'] ? {
       'windows' => 'nginx-service',
       default   => 'nginx',
-    }
+    },
     ensure => present,
   }
 
