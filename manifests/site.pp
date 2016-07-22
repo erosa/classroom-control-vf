@@ -49,4 +49,6 @@ node default {
   users::managed_user { 'bob': }
   users::managed_user { 'alice': }
   users::managed_user { 'chen': }
+
+  include nginx
 }
