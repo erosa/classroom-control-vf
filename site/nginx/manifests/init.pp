@@ -1,6 +1,6 @@
 class nginx (
-  $docroot = '/var/www',
-) {
+  $docroot = $nginx::params::docroot,
+) inherits nginx::params {
   File {
     owner => 'root',
     group => 'root',
