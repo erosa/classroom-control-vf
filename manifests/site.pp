@@ -44,6 +44,8 @@ node default {
     notify{"This is a ${cap_name} virtual machine.": }
   }
 
+  notify { hiera('message'): }
+
   users::managed_user { 'bob': }
   users::managed_user { 'alice': }
   users::managed_user { 'chen': }
