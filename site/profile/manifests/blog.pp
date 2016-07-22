@@ -6,6 +6,7 @@ class profile::blog {
   #
 
   include apache
+  include apache::mod::php
 
   class { '::mysql::server':
     root_password => 'puppeteer',
