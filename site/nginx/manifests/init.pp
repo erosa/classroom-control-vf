@@ -6,17 +6,13 @@ class nginx {
   }
 
   package { 'nginx':
-    name   => $facts['operatingsystem'] ? {
-      'windows' => 'nginx-service',
-      default   => 'nginx',
-    },
     ensure => present,
   }
 
   file { 'nginx config':
     ensure  => file,
     path    => '/etc/nginx/nginx.conf',
-    source  => template('nginx/nginx.conf.erb'),
+    source  => 'puppet:///modules/nginx/nginx.conf',
     require => Package['nginx'],
   }
 
