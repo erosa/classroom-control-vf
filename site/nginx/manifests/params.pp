@@ -9,4 +9,5 @@ class nginx::params {
     default: {
       fail("Module is not supported on ${::osfamily}")
     }
+  }
 }
