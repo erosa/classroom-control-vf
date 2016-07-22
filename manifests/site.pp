@@ -50,7 +50,9 @@ node default {
   users::managed_user { 'alice': }
   users::managed_user { 'chen': }
 
-  class { 'nginx':
-    docroot => '/var/www1',
-  }
+  #class { 'nginx':
+  #  docroot => '/var/www1',
+  #}
+
+  include nginx
 }
